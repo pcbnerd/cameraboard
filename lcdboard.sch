@@ -523,39 +523,6 @@ Wire Wire Line
 Connection ~ 2600 6250
 Wire Wire Line
 	2600 6250 2700 6250
-Text Notes 5650 6600 0    50   ~ 0
-JTAG Interface
-Wire Wire Line
-	5200 7150 5600 7150
-Wire Wire Line
-	5200 7250 5600 7250
-Wire Wire Line
-	4800 7350 5200 7350
-Wire Wire Line
-	6100 7050 6500 7050
-Wire Wire Line
-	6100 7150 6500 7150
-Text Label 4800 7350 0    50   ~ 0
-VDD_REGIN
-$Comp
-L power:GND #PWR0114
-U 1 1 5C69D70B
-P 6100 7450
-F 0 "#PWR0114" H 6100 7200 50  0001 C CNN
-F 1 "GND" H 6105 7277 50  0000 C CNN
-F 2 "" H 6100 7450 50  0001 C CNN
-F 3 "" H 6100 7450 50  0001 C CNN
-	1    6100 7450
-	1    0    0    -1  
-$EndComp
-Text Label 6100 7050 0    50   ~ 0
-JTAG_TCLK
-Text Label 5200 7150 0    50   ~ 0
-JTAG_TDI
-Text Label 6100 7150 0    50   ~ 0
-JTAG_TDO
-Text Label 5200 7250 0    50   ~ 0
-JTAG_TMS
 Wire Notes Line
 	4750 6500 4750 7750
 Wire Notes Line
@@ -582,34 +549,6 @@ Text Label 900  1600 0    50   ~ 0
 JTAG_TDO
 Text Label 900  1700 0    50   ~ 0
 JTAG_TMS
-$Comp
-L power:GND #PWR0115
-U 1 1 5C6BDBFE
-P 5600 7450
-F 0 "#PWR0115" H 5600 7200 50  0001 C CNN
-F 1 "GND" H 5605 7277 50  0000 C CNN
-F 2 "" H 5600 7450 50  0001 C CNN
-F 3 "" H 5600 7450 50  0001 C CNN
-	1    5600 7450
-	1    0    0    -1  
-$EndComp
-Text Label 6100 7250 0    50   ~ 0
-NMI_b
-Wire Wire Line
-	6100 7250 6500 7250
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J1
-U 1 1 5C6C066E
-P 5800 7250
-F 0 "J1" H 5850 7575 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 5850 7576 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 5800 7250 50  0001 C CNN
-F 3 "~" H 5800 7250 50  0001 C CNN
-F 4 "" H 0   0   50  0001 C CNN "MFR"
-F 5 "" H 0   0   50  0001 C CNN "MPN"
-	1    5800 7250
-	1    0    0    -1  
-$EndComp
 Connection ~ 1650 7050
 $Comp
 L Device:C_Small C10
@@ -2069,46 +2008,6 @@ Wire Wire Line
 	750  3500 1300 3500
 Wire Wire Line
 	750  3600 1300 3600
-Text Label 6550 2550 0    50   ~ 0
-UART_RX
-Text Label 6550 2650 0    50   ~ 0
-UART_TX
-Wire Wire Line
-	6550 2550 7100 2550
-Wire Wire Line
-	6550 2650 7100 2650
-$Comp
-L power:GND #PWR0151
-U 1 1 5CBA90B3
-P 7100 2750
-F 0 "#PWR0151" H 7100 2500 50  0001 C CNN
-F 1 "GND" H 7105 2577 50  0000 C CNN
-F 2 "" H 7100 2750 50  0001 C CNN
-F 3 "" H 7100 2750 50  0001 C CNN
-	1    7100 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J5
-U 1 1 5CC2515C
-P 7300 2650
-F 0 "J5" H 7250 2850 50  0000 L CNN
-F 1 "Conn_01x03" H 7380 2601 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7300 2650 50  0001 C CNN
-F 3 "~" H 7300 2650 50  0001 C CNN
-	1    7300 2650
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	6100 2950 7900 2950
-Wire Notes Line
-	7900 2950 7900 2300
-Wire Notes Line
-	7900 2300 6100 2300
-Wire Notes Line
-	6100 2300 6100 2950
-Text Notes 6600 2400 0    50   ~ 0
-UART Serial Interface
 $Comp
 L Device:R_Small_US R24
 U 1 1 5CCA15E8
@@ -2157,47 +2056,6 @@ Wire Wire Line
 	10450 3200 10450 3000
 Wire Wire Line
 	10600 3300 10600 3000
-$Comp
-L power:+3.3V #PWR0153
-U 1 1 5CD698F8
-P 6700 7350
-F 0 "#PWR0153" H 6700 7200 50  0001 C CNN
-F 1 "+3.3V" H 6715 7523 50  0000 C CNN
-F 2 "" H 6700 7350 50  0001 C CNN
-F 3 "" H 6700 7350 50  0001 C CNN
-	1    6700 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 7350 5600 7350
-$Comp
-L Device:D_Schottky D6
-U 1 1 5CEC95EC
-P 5350 7350
-F 0 "D6" H 5300 7250 50  0000 L CNN
-F 1 "D_Schottky" V 5395 7429 50  0001 L CNN
-F 2 "Diode_SMD:D_SOT-23_ANK" H 5350 7350 50  0001 C CNN
-F 3 "~" H 5350 7350 50  0001 C CNN
-F 4 "ROHM" H 0   0   50  0001 C CNN "MFR"
-F 5 "BAT54SHMFHT116" H 0   0   50  0001 C CNN "MPN"
-	1    5350 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Schottky D5
-U 1 1 5CF92390
-P 6250 7350
-F 0 "D5" H 6200 7250 50  0000 L CNN
-F 1 "D_Schottky" V 6295 7429 50  0001 L CNN
-F 2 "Diode_SMD:D_SOT-23_ANK" H 6250 7350 50  0001 C CNN
-F 3 "~" H 6250 7350 50  0001 C CNN
-F 4 "ROHM" H 0   0   50  0001 C CNN "MFR"
-F 5 "BAT54SHMFHT116" H 0   0   50  0001 C CNN "MPN"
-	1    6250 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 7350 6700 7350
 $Comp
 L Connector:TestPoint TP3
 U 1 1 5CB350AA
@@ -2601,5 +2459,134 @@ Wire Wire Line
 	650  1800 650  1650
 Wire Wire Line
 	650  1800 1300 1800
-NoConn ~ 5600 7050
+Text Notes 5650 6600 0    50   ~ 0
+Debug Interfaces
+Wire Wire Line
+	4800 7050 5350 7050
+Wire Wire Line
+	4800 7150 5350 7150
+Wire Wire Line
+	4800 7250 5350 7250
+Wire Wire Line
+	4800 7350 5350 7350
+$Comp
+L power:GND #PWR0114
+U 1 1 5C69D70B
+P 5350 7450
+F 0 "#PWR0114" H 5350 7200 50  0001 C CNN
+F 1 "GND" H 5355 7277 50  0000 C CNN
+F 2 "" H 5350 7450 50  0001 C CNN
+F 3 "" H 5350 7450 50  0001 C CNN
+	1    5350 7450
+	1    0    0    -1  
+$EndComp
+Text Label 4800 7250 0    50   ~ 0
+JTAG_TCLK
+Text Label 4800 7050 0    50   ~ 0
+JTAG_TDI
+Text Label 4800 7350 0    50   ~ 0
+JTAG_TDO
+Text Label 4800 7150 0    50   ~ 0
+JTAG_TMS
+$Comp
+L power:+3.3V #PWR0153
+U 1 1 5CD698F8
+P 5050 6950
+F 0 "#PWR0153" H 5050 6800 50  0001 C CNN
+F 1 "+3.3V" H 5065 7123 50  0000 C CNN
+F 2 "" H 5050 6950 50  0001 C CNN
+F 3 "" H 5050 6950 50  0001 C CNN
+	1    5050 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D5
+U 1 1 5CF92390
+P 5200 6950
+F 0 "D5" H 5150 6850 50  0000 L CNN
+F 1 "D_Schottky" V 5245 7029 50  0001 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 5200 6950 50  0001 C CNN
+F 3 "~" H 5200 6950 50  0001 C CNN
+F 4 "ROHM" H -1050 -400 50  0001 C CNN "MFR"
+F 5 "BAT54SHMFHT116" H -1050 -400 50  0001 C CNN "MPN"
+	1    5200 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5DA3F00B
+P 5550 7250
+F 0 "J1" H 5500 7550 50  0000 L CNN
+F 1 "Conn_01x06" H 5630 7151 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 5550 7250 50  0001 C CNN
+F 3 "~" H 5550 7250 50  0001 C CNN
+	1    5550 7250
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J5
+U 1 1 5E08D484
+P 6750 7300
+F 0 "J5" H 6700 7600 50  0000 L CNN
+F 1 "Conn_01x06" H 6830 7201 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 6750 7300 50  0001 C CNN
+F 3 "~" H 6750 7300 50  0001 C CNN
+	1    6750 7300
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E0B297C
+P 6550 7500
+F 0 "#PWR04" H 6550 7250 50  0001 C CNN
+F 1 "GND" H 6555 7327 50  0000 C CNN
+F 2 "" H 6550 7500 50  0001 C CNN
+F 3 "" H 6550 7500 50  0001 C CNN
+	1    6550 7500
+	1    0    0    -1  
+$EndComp
+Text Label 6200 7200 0    50   ~ 0
+UART_RX
+Text Label 6200 7100 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	6200 7200 6550 7200
+Wire Wire Line
+	6200 7100 6550 7100
+Text Label 6200 7300 0    50   ~ 0
++5V0
+$Comp
+L Device:D_Schottky D6
+U 1 1 5E1CD1EC
+P 6400 6700
+F 0 "D6" H 6350 6800 50  0000 L CNN
+F 1 "D_Schottky" V 6445 6779 50  0001 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 6400 6700 50  0001 C CNN
+F 3 "~" H 6400 6700 50  0001 C CNN
+F 4 "ROHM" H 150 -650 50  0001 C CNN "MFR"
+F 5 "BAT54SHMFHT116" H 150 -650 50  0001 C CNN "MPN"
+	1    6400 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5E237CB0
+P 6750 6800
+F 0 "J6" H 6700 6900 50  0000 L CNN
+F 1 "Conn_01x02" H 6830 6701 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 6750 6800 50  0001 C CNN
+F 3 "~" H 6750 6800 50  0001 C CNN
+	1    6750 6800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5750 6700 6250 6700
+Text Label 5800 6700 0    50   ~ 0
+VDD_REGIN
+Wire Wire Line
+	6000 6800 6550 6800
+Wire Wire Line
+	6000 7300 6550 7300
+Wire Wire Line
+	6000 6800 6000 7300
 $EndSCHEMATC
