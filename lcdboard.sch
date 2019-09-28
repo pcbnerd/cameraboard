@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:camboard-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -302,8 +301,6 @@ F 3 "" H 2800 6250 50  0001 C CNN
 $EndComp
 Text Notes 1000 6600 0    50   ~ 0
 RESET & Boot Selection
-Wire Wire Line
-	2000 7050 2000 6900
 Wire Wire Line
 	1100 7050 1100 6900
 Wire Wire Line
@@ -1244,10 +1241,8 @@ Text Label 750  2900 0    50   ~ 0
 DISP_DB8
 Text Label 750  3000 0    50   ~ 0
 DISP_DB7
-Text Label 750  2500 0    50   ~ 0
+Text Label 750  4600 0    50   ~ 0
 DISP_IM0
-Text Label 750  2600 0    50   ~ 0
-CAM_XCLK1
 Wire Wire Line
 	750  1900 1300 1900
 $Comp
@@ -1331,7 +1326,7 @@ Wire Wire Line
 Text Label 10600 2000 0    50   ~ 0
 CAM_D8
 Wire Wire Line
-	10250 2000 10950 2000
+	10250 2000 10900 2000
 Text Label 10600 1800 0    50   ~ 0
 CAM_D7
 Wire Wire Line
@@ -1387,9 +1382,7 @@ Wire Wire Line
 Wire Wire Line
 	750  2400 1300 2400
 Wire Wire Line
-	750  2500 1300 2500
-Wire Wire Line
-	750  2600 1300 2600
+	750  4600 1300 4600
 Wire Wire Line
 	750  2800 1300 2800
 Wire Wire Line
@@ -1491,21 +1484,8 @@ Wire Wire Line
 	9000 1200 9750 1200
 Wire Wire Line
 	9000 950  9000 1200
-Wire Wire Line
-	10250 2100 10800 2100
 Text Label 10300 2100 0    50   ~ 0
 CAM_XCLK1
-$Comp
-L Connector:TestPoint TP4
-U 1 1 5CEA5D62
-P 10800 2100
-F 0 "TP4" V 10858 2174 50  0000 L TNN
-F 1 "TestPoint" H 10858 2129 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 11000 2100 50  0001 C CNN
-F 3 "~" H 11000 2100 50  0001 C CNN
-	1    10800 2100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	750  5000 1300 5000
 Wire Wire Line
@@ -1952,11 +1932,8 @@ Wire Notes Line
 	7900 4350 6100 4350
 Wire Notes Line
 	6100 4350 6100 5600
-NoConn ~ 1300 4600
-NoConn ~ 1300 4700
 NoConn ~ 3600 5000
 NoConn ~ 3600 5200
-NoConn ~ 1300 6000
 NoConn ~ 1300 5700
 $Comp
 L Connector:USB_B_Micro J4
@@ -2227,28 +2204,6 @@ $EndComp
 Wire Wire Line
 	6400 7350 6700 7350
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5C9A3DFD
-P 2950 6800
-F 0 "TP1" H 2950 7000 50  0000 L CNN
-F 1 "TestPoint" H 3008 6829 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3150 6800 50  0001 C CNN
-F 3 "~" H 3150 6800 50  0001 C CNN
-	1    2950 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 5CB03011
-P 2000 6900
-F 0 "TP2" H 2000 7100 50  0000 L CNN
-F 1 "TestPoint" H 2058 6929 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2200 6900 50  0001 C CNN
-F 3 "~" H 2200 6900 50  0001 C CNN
-	1    2000 6900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:TestPoint TP3
 U 1 1 5CB350AA
 P 1100 6900
@@ -2454,4 +2409,173 @@ Wire Wire Line
 	6900 950  7250 950 
 Text Label 6600 950  0    50   ~ 0
 VDD_REGIN
+Text Label 750  2600 0    50   ~ 0
+XTAL0_12MHZ
+Wire Wire Line
+	750  2600 1300 2600
+Text Label 750  2500 0    50   ~ 0
+EXTAL0
+Wire Wire Line
+	750  2500 1300 2500
+Text Label 4600 6200 0    50   ~ 0
+XTAL0_12MHZ
+Wire Wire Line
+	4600 6200 5250 6200
+Text Label 4600 5900 0    50   ~ 0
+EXTAL0
+NoConn ~ 1300 6000
+NoConn ~ 1300 4700
+Wire Wire Line
+	10500 2200 11050 2200
+Text Label 10500 2200 0    50   ~ 0
+XTAL0_12MHZ
+$Comp
+L Device:R_Small_US R4
+U 1 1 5DC690B7
+P 11050 2100
+F 0 "R4" V 11118 2146 50  0000 L BNN
+F 1 "0" V 11118 2055 50  0000 R BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 11050 2100 50  0001 C CNN
+F 3 "~" H 11050 2100 50  0001 C CNN
+F 4 "Vishay" H 450 -800 50  0001 C CNN "MFR"
+F 5 "CRCW04024K70JNEDC" H 450 -800 50  0001 C CNN "MPN"
+	1    11050 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11000 2100 11000 2000
+Wire Wire Line
+	11000 2000 11050 2000
+Wire Wire Line
+	10250 2100 11000 2100
+$Comp
+L Device:Crystal_GND24 Y2
+U 1 1 5DD5DD61
+P 5250 6050
+F 0 "Y2" V 5150 5750 50  0000 L CNN
+F 1 "12MHz" V 5350 5650 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm_HandSoldering" H 5250 6050 50  0001 C CNN
+F 3 "~" H 5250 6050 50  0001 C CNN
+F 4 "Pletronics Inc." H 1300 600 50  0001 C CNN "MFR"
+F 5 "SM11T-22-12.0M-30H1CG" H 1300 600 50  0001 C CNN "MPN"
+	1    5250 6050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R5
+U 1 1 5DDFC134
+P 5850 6050
+F 0 "R5" V 5918 6096 50  0000 L BNN
+F 1 "1M" V 5918 6005 50  0000 R BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 5850 6050 50  0001 C CNN
+F 3 "~" H 5850 6050 50  0001 C CNN
+F 4 "Vishay" H -4750 3150 50  0001 C CNN "MFR"
+F 5 "CRCW04024K70JNEDC" H -4750 3150 50  0001 C CNN "MPN"
+	1    5850 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5950 5850 5900
+Wire Wire Line
+	5850 5900 5250 5900
+Wire Wire Line
+	5850 6150 5850 6200
+$Comp
+L Device:C_Small C21
+U 1 1 5DE687B0
+P 5500 6350
+F 0 "C21" V 5550 6150 50  0000 L CNN
+F 1 "22pF" V 5450 6100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5500 6350 50  0001 C CNN
+F 3 "~" H 5500 6350 50  0001 C CNN
+F 4 "Kemet" H -800 1250 50  0001 C CNN "MFR"
+F 5 "C0402C104K4RAC7411" H -800 1250 50  0001 C CNN "MPN"
+	1    5500 6350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5DE687BA
+P 5700 6350
+F 0 "#PWR02" H 5700 6100 50  0001 C CNN
+F 1 "GND" H 5705 6177 50  0000 C CNN
+F 2 "" H 5700 6350 50  0001 C CNN
+F 3 "" H 5700 6350 50  0001 C CNN
+	1    5700 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 6350 5700 6350
+$Comp
+L Device:C_Small C20
+U 1 1 5DF7E070
+P 5500 5750
+F 0 "C20" V 5550 5550 50  0000 L CNN
+F 1 "22pF" V 5450 5500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5500 5750 50  0001 C CNN
+F 3 "~" H 5500 5750 50  0001 C CNN
+F 4 "Kemet" H -800 650 50  0001 C CNN "MFR"
+F 5 "C0402C104K4RAC7411" H -800 650 50  0001 C CNN "MPN"
+	1    5500 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5DF7E07A
+P 5700 5750
+F 0 "#PWR01" H 5700 5500 50  0001 C CNN
+F 1 "GND" H 5705 5577 50  0000 C CNN
+F 2 "" H 5700 5750 50  0001 C CNN
+F 3 "" H 5700 5750 50  0001 C CNN
+	1    5700 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 5750 5700 5750
+Wire Notes Line
+	6050 6450 6050 5500
+Wire Notes Line
+	6050 5500 4550 5500
+Wire Notes Line
+	4550 5500 4550 6450
+Wire Notes Line
+	4550 6450 6050 6450
+Text Notes 5050 5600 0    50   ~ 0
+External Oscillator
+Wire Wire Line
+	4600 5900 5250 5900
+Wire Wire Line
+	5850 6200 5250 6200
+Connection ~ 5250 5900
+Connection ~ 5250 6200
+Wire Wire Line
+	5400 6350 5250 6350
+Wire Wire Line
+	5250 5750 5400 5750
+$Comp
+L power:GND #PWR0135
+U 1 1 5E362CDB
+P 5450 6050
+F 0 "#PWR0135" H 5450 5800 50  0001 C CNN
+F 1 "GND" H 5455 5877 50  0000 C CNN
+F 2 "" H 5450 6050 50  0001 C CNN
+F 3 "" H 5450 6050 50  0001 C CNN
+	1    5450 6050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0141
+U 1 1 5E3850B0
+P 5050 6050
+F 0 "#PWR0141" H 5050 5800 50  0001 C CNN
+F 1 "GND" H 5055 5877 50  0000 C CNN
+F 2 "" H 5050 6050 50  0001 C CNN
+F 3 "" H 5050 6050 50  0001 C CNN
+	1    5050 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 6200 5250 6350
+Wire Wire Line
+	5250 5750 5250 5900
 $EndSCHEMATC
