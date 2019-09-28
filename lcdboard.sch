@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:smirk-pcb-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -525,8 +526,6 @@ Wire Wire Line
 Text Notes 5650 6600 0    50   ~ 0
 JTAG Interface
 Wire Wire Line
-	5200 7050 5600 7050
-Wire Wire Line
 	5200 7150 5600 7150
 Wire Wire Line
 	5200 7250 5600 7250
@@ -549,8 +548,6 @@ F 3 "" H 6100 7450 50  0001 C CNN
 	1    6100 7450
 	1    0    0    -1  
 $EndComp
-Text Label 5200 7050 0    50   ~ 0
-JTAG_TRST
 Text Label 6100 7050 0    50   ~ 0
 JTAG_TCLK
 Text Label 5200 7150 0    50   ~ 0
@@ -563,8 +560,6 @@ Wire Notes Line
 	4750 6500 4750 7750
 Wire Notes Line
 	4750 7750 6900 7750
-Wire Wire Line
-	900  1800 1300 1800
 Wire Wire Line
 	900  1500 1300 1500
 Wire Wire Line
@@ -2578,4 +2573,33 @@ Wire Wire Line
 	5250 6200 5250 6350
 Wire Wire Line
 	5250 5750 5250 5900
+$Comp
+L Device:R_Small_US R8
+U 1 1 5D8CBE3A
+P 650 1550
+F 0 "R8" V 718 1596 50  0000 L BNN
+F 1 "4.7K" V 718 1505 50  0000 R BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 650 1550 50  0001 C CNN
+F 3 "~" H 650 1550 50  0001 C CNN
+F 4 "Vishay" H -7750 -2150 50  0001 C CNN "MFR"
+F 5 "CRCW04024K70JNEDC" H -7750 -2150 50  0001 C CNN "MPN"
+	1    650  1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5D946CF3
+P 650 1450
+F 0 "#PWR03" H 650 1300 50  0001 C CNN
+F 1 "+3.3V" H 665 1623 50  0000 C CNN
+F 2 "" H 650 1450 50  0001 C CNN
+F 3 "" H 650 1450 50  0001 C CNN
+	1    650  1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  1800 650  1650
+Wire Wire Line
+	650  1800 1300 1800
+NoConn ~ 5600 7050
 $EndSCHEMATC
